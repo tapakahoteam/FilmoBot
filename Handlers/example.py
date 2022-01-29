@@ -1,8 +1,8 @@
 from aiogram import types
 from aiogram.dispatcher.filters import Text
-from aiogram.types.inline_keyboard import InlineKeyboardMarkup
 
 from Settings import settings
+from Services import ExampleService
 from Callbacks import example_callback
 from Keyboards import example_keyboard
 
@@ -15,19 +15,10 @@ async def command_example(message: types.Message):
     await message.answer("/start works!!!", reply_markup=example_keyboard.main)
 
 
-# TODO: move inline into service
 # <<<<<<<<<<<<<<<<<< Command with callback >>>>>>>>>>>>>>>>>>
 @settings.dp.message_handler(commands=["help"])
 async def command_example(message: types.Message):
-
-    inline = InlineKeyboardMarkup(row_width=3)
-    inline.insert(example_callback.example_callback_btns["1"])
-    inline.insert(example_callback.example_callback_btns["2"])
-    inline.insert(example_callback.example_callback_btns["3"])
-    inline.insert(example_callback.example_callback_btns["A"])
-    inline.insert(example_callback.example_callback_btns["B"])
-    inline.insert(example_callback.example_callback_btns["C"])
-
+    inline = ExampleService.get_example_inline_callback()
     await message.answer("/help works!!!", reply_markup=inline)
 
 
