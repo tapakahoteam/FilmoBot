@@ -2,7 +2,7 @@ import logging
 from aiogram import executor
 from Settings import settings
 
-import Handlers
+from Handlers import *
 
 async def on_startup(x):
     logging.info('Bot started')

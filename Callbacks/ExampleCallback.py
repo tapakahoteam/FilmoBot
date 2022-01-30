@@ -49,9 +49,9 @@ class ExampleCallback:
         }
         
         self.example_inline = InlineKeyboardMarkup(row_width=3)
-        self.example_inline.insert(self.example_inline_data["1"])
-        self.example_inline.insert(self.example_inline_data["2"])
-        self.example_inline.insert(self.example_inline_data["3"])
-        self.example_inline.insert(self.example_inline_data["A"])
-        self.example_inline.insert(self.example_inline_data["B"])
-        self.example_inline.insert(self.example_inline_data["C"])
+        self.example_inline.insert(self.example_inline_btns["1"])
+        self.example_inline.insert(self.example_inline_btns["2"])
+        self.example_inline.insert(self.example_inline_btns["3"])
+        self.example_inline.insert(self.example_inline_btns["A"])
+        self.example_inline.insert(self.example_inline_btns["B"])
+        self.example_inline.insert(self.example_inline_btns["C"])
