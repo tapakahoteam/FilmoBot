@@ -12,7 +12,7 @@ async def on_shutdown(x):
 
 def start_polling():
     executor.start_polling(settings.dp, skip_updates=True, on_startup=on_startup, on_shutdown=on_shutdown)
-    logging.info('Script finished\n')
+    logging.info('Script finished')
 
 if __name__ == '__main__':
     start_polling()
