@@ -1,9 +1,20 @@
 translations = {
-    'start': '/start works!!!',
-    'help': '/help works!!!',
-    'number-value': "Number value: {value}",
-    'letter-value': "Letter value: {value}",
-    'hello': 'Hello!!!',
-    'joke': '*Funny joke*',
-    'dont-understand': "Sorry, i don't understand, type /start or /help"
+    'answers': {
+        'start': 'Welcome, {user_name}!\nI am - *{bot_name}*, i can help you to fild any film 😎',
+        'random-film': "Your random film: {film_name}",
+        'random-serial': "Choose serial category",
+    },
+    'keyboards': {
+        'commands': {
+            'random-film': '🎲 Random film 🎲',
+            'random-serial': '🎲 Random serial 🎲'
+        }
+    },
+    'callbacks': {
+        'serial': {
+            'fantastic': 'Fantastic',
+            'comedy': 'Comedy',
+            'science': 'Science'
+        }
+    }
 }

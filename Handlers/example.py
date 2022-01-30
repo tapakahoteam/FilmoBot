@@ -10,13 +10,13 @@ from Keyboards import example_keyboard
 
 # <<<<<<<<<<<<<<<<<< Command [answering with keyboard] >>>>>>>>>>>>>>>>>>
 @settings.dp.message_handler(commands=["start"])
-async def command_example(message: types.Message):
+async def command_start_example(message: types.Message):
     await message.answer(translations.get('start'), reply_markup=example_keyboard.main)
 
 
 # <<<<<<<<<<<<<<<<<< Command with callback >>>>>>>>>>>>>>>>>>
 @settings.dp.message_handler(commands=["help"])
-async def command_example(message: types.Message):
+async def command_help_example(message: types.Message):
     inline = ExampleService.get_example_inline_callback()
     await message.answer(translations.get('help'), reply_markup=inline)
 
