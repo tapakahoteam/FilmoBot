@@ -1,2 +1,2 @@
-# StickerBot
-Sticker Bot
+# FilmoBot
+Filmo Bot
